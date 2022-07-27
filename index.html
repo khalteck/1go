@@ -11,6 +11,8 @@
         <meta name="twitter:description" content="1goexplore - Become an explorer, explore the world. Experience the 2022 World Cup and the Beauty of Qatar. We help ordinary people explore the world better.">
         <meta property="og:image" content="explore-logo__2_-removebg-preview">
         <meta name="twitter:image" content="explore-logo__2_-removebg-preview">
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://1goexplore.com/"/>
         <meta name=”robots” content=”index, follow”>
         <meta name="google-site-verification" content="MnhQ6gha4T13oz2I9DDEyeRAF66jKHENjrn8-FjcenI" />
         <link rel="canonical" href="https://1goexplore.com/" />
@@ -21,6 +23,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="icon" href="favicon(1).ico" type="image/x-icon" />  
+        <link rel="shortcut icon" href="favicon(1).ico" type="image/x-icon" /> 
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="https://kit.fontawesome.com/5e43348ada.js" crossorigin="anonymous"></script>
     </head>
@@ -62,21 +66,29 @@
                 <div class="sign-up-cont">
                     <h3>Sign up to get started</h3>
                     <h3 class="already">Already registered <a href="#login" class="log" id="trigger-login2">Log in</a></h3>
-                    <form>
-                        <label for="name" id="label">Name</label><br>
-                        <input type="text" id="name" placeholder="Enter your name" class="field" required>
+                    <form id="signupForm" onsubmit="sendData()">
+                        <label for="name" id="label">First name</label><br>
+                        <input type="text" id="name" name="firstname" placeholder="Enter your first name" class="field" value="john" required>
+                        <br>
+                        <label for="name" id="label">Last name</label><br>
+                        <input type="text" id="name" name="lastname" placeholder="Enter your Last name" class="field" value="doe" required>
                         <br>
                         <label for="name" id="label">Email Address</label><br>
-                        <input type="text" id="name" placeholder="Enter your email address" class="field" required>
+                        <input type="email" id="name" name="email" placeholder="Enter your email address" class="field" value="johndoe@email.com" required>
                         <br>
-                        <label for="name" id="label">Password</label><br>
-                        <input type="password" id="name" placeholder="Enter your password" class="field" required>
-                        <br>
-                        <label for="name" id="label">Repeat Password</label><br>
-                        <input type="password" id="name" placeholder="Confirm password" class="field" required>
+                        <div style="position: relative;">
+                            <label for="name" id="label">Password </label><br>
+                            <input type="password" id="pass-field1" name="password" placeholder="Enter your password" class="field pass-input" required>
+                            <i class="fas fa-eye" style="color: lightgray; position: absolute; right: 15px; top: 37px; cursor: pointer;" onclick="togglePsw()"></i>
+                        </div>
+                        <div style="position: relative;">
+                            <label for="name" id="label">Repeat Password</label><br>
+                            <input type="password" id="pass-field2" name="repeatpassword" placeholder="Confirm password" class="field pass-input" required>
+                            <i class="fas fa-eye" style="color: lightgray; position: absolute; right: 15px; top: 37px; cursor: pointer;" onclick="togglePsw()"></i>
+                        </div>
                         <br>
                         <div class="remember">
-                            <input type="checkbox" id="agree" name="save-details" value="remember">
+                            <input type="checkbox" id="agree" name="save-details" value="remember" required>
                             <label for="agree">I Agree to the <a href="#" class="log">Terms & Conditions</a> and <a href="#" class="log">Privacy Policy</a>.</label>
                         </div>
                         <button type="submit" class="submit-button" id="submit">SIGN UP</button>
@@ -92,8 +104,11 @@
                         <label for="name" id="label">Email Address</label><br>
                         <input type="text" id="name" placeholder="Enter your email address" class="field" required>
                         <br>
-                        <label for="name" id="label">Password</label><br>
-                        <input type="password" id="name" placeholder="Enter your password" class="field" required>
+                        <div style="position: relative;">
+                            <label for="name" id="label">Password</label><br>
+                            <input type="password" id="name" placeholder="Enter your password" class="field pass-input" required>
+                            <i class="fas fa-eye" style="color: lightgray; position: absolute; right: 15px; top: 37px; cursor: pointer;" onclick="togglePsw()"></i>
+                        </div>
                         <br>
                         <div class="remember">
                             <input type="checkbox" id="remember" name="save-details" value="remember">

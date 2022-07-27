@@ -156,7 +156,7 @@ main {
     font-weight: 900;
     border: 2px solid #1f66d0;
     margin: 0;
-    padding: 20px 80px;
+    padding: 15px 40px;
     box-sizing: border-box;
     border-radius: 40px;
     transition: all 0.3s ease-out;
@@ -274,7 +274,7 @@ main {
     text-align: right;
 }
 .thick {
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 900;
 }
 /*the sign up pop up page!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/

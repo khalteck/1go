@@ -1,3 +1,4 @@
+AOS.init();
 //the header animation trigger!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!S
 window.onscroll = function spread() {
     if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
@@ -13,6 +14,18 @@ window.onscroll = function spread() {
         document.getElementById("sign").style.display = "none";
     }
 }
+
+//to toggle password visibility!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function togglePsw() {
+    let passwordInput = document.querySelectorAll(".pass-input");
+    passwordInput.forEach((item, index) => {
+        if (item.type === "password") {
+            item.type = "text";
+        } else {
+            item.type = "password";
+        }
+    })
+  } 
 
 
 //the dropdown menu!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -158,11 +171,36 @@ window.addEventListener("load", function() {
         popupDownload.style.opacity = "1"
     }, 5000)
 });
-
-AOS.init();
-
-
 document.getElementById("close-popup").addEventListener("click", () => {
     popupDownload.classList.add("hide")
     document.getElementById("download-sec").classList.add("hide");
 });
+
+/*to submit signup data!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+function sendData() {
+    let signupData = new FormData(document.getElementById("signupForm"));
+    fetch("#", {
+      method: "POST",
+      body: JSON.stringify(signupData)
+    })
+   //return server response as text
+    .then((result) => {
+      if (result.status != 200) { throw new Error("Bad Server Response"); }
+      return result.text();
+    })
+    //server response
+    .then((response) => {
+      console.log(response);
+      if (response.error) {
+        alert("Invalid details"); /*displays error message*/
+      } else {
+        window.open(
+          "target.html"
+        ); /*opens the target page while Id & password matches*/
+      }
+    })
+    //handle errors
+    .catch((error) => { console.log(error); });
+  }
+
+  /*to login!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
