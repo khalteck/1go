@@ -61,20 +61,20 @@
             </div>
         </header>
         <main>
-            <section id="signup" class="hide">
+            <section id="signup">
                 <div id="close-login1" class="close-login"></div>
                 <div class="sign-up-cont">
                     <h3>Sign up to get started</h3>
                     <h3 class="already">Already registered <a href="#login" class="log" id="trigger-login2">Log in</a></h3>
                     <form id="signupForm" onsubmit="sendData()">
                         <label for="name" id="label">First name</label><br>
-                        <input type="text" id="name" name="firstname" placeholder="Enter your first name" class="field" value="john" required>
+                        <input type="text" id="name" name="firstname" placeholder="Enter your first name" class="field" required>
                         <br>
                         <label for="name" id="label">Last name</label><br>
-                        <input type="text" id="name" name="lastname" placeholder="Enter your Last name" class="field" value="doe" required>
+                        <input type="text" id="name" name="lastname" placeholder="Enter your Last name" class="field" required>
                         <br>
                         <label for="name" id="label">Email Address</label><br>
-                        <input type="email" id="name" name="email" placeholder="Enter your email address" class="field" value="johndoe@email.com" required>
+                        <input type="email" id="name" name="email" placeholder="Enter your email address" class="field" required>
                         <br>
                         <div style="position: relative;">
                             <label for="name" id="label">Password </label><br>
@@ -93,128 +93,6 @@
                         </div>
                         <button type="submit" class="submit-button" id="submit">SIGN UP</button>
                     </form>
-                </div>
-            </section>
-            <section id="login" class="hide">
-                <div id="close-login2" class="close-login"></div>
-                <div class="sign-up-cont">
-                    <h3>LOGIN</h3>
-                    <h3 class="already">Don't have an Account? <a href="#signup" class="log" id="trigger-signup2">Sign up</a></h3>
-                    <form>
-                        <label for="name" id="label">Email Address</label><br>
-                        <input type="text" id="name" placeholder="Enter your email address" class="field" required>
-                        <br>
-                        <div style="position: relative;">
-                            <label for="name" id="label">Password</label><br>
-                            <input type="password" id="name" placeholder="Enter your password" class="field pass-input" required>
-                            <i class="fas fa-eye" style="color: lightgray; position: absolute; right: 15px; top: 37px; cursor: pointer;" onclick="togglePsw()"></i>
-                        </div>
-                        <br>
-                        <div class="remember">
-                            <input type="checkbox" id="remember" name="save-details" value="remember">
-                            <label for="remember">Remember me</label>
-                        </div>
-                        <button type="submit" class="submit-button" id="submit">LOG IN</button>
-                    </form><br>
-                    <a href="#" class="log">Forgot password?</a>
-                </div>
-            </section>
-            <section id="download-sec" class="hide">
-                <div class="download-cont">
-                    <img class="download-illus" src="kindpng_2988138.png">
-                    <div class="down-icons-cont">
-                        <h3><span class="down-span">Download</span><br> the 1goexplore app and explore the world!</h3>
-                        <a href="#"><img class="down-icon" src="https://www.terawork.com/static/media/appstore.67018c89.svg"></a>
-                        <a href="#"><img class="down-icon" src="https://www.terawork.com/static/media/playstore.a2e200ec.svg"></a>
-                    </div>
-                </div>
-            </section>
-            <section id="popup-download" class="hide">
-                <div id="close-popup"></div>
-                <div class="down-icons-cont">
-                    <h3><span class="down-span">Download</span><br> the 1goexplore app and explore the world!</h3>
-                    <a href="#"><img class="down-icon" src="https://www.terawork.com/static/media/appstore.67018c89.svg"></a>
-                    <a href="#"><img class="down-icon" src="https://www.terawork.com/static/media/playstore.a2e200ec.svg"></a>
-                </div>
-            </section>
-            <section id="home"> 
-                <div class="home-lay">
-                    <div class="first-cont">
-                        <p class="line1">Become an Explorer<br> Today</p>
-                        <button class="button3">R E G I S T E R</button>
-                    </div>
-                </div>
-            </section>
-            <section id="second">
-                <h1 class="ongoing">ONGOING TOURS</h1><br>
-                <div class="world-cup-div">
-                    <img src="2022_FIFA_World_Cup 1.svg" class="world-cup">
-                    <div class="enjoy-div fadey fadeyOut">
-                        <p class="exp-text">With 1goexplore, experience the 2022 World Cup <br>and the Beauty of Qatar</p>
-                        <button class="button3">Plan Trip</button>
-                    </div>
-                </div>
-            </section>
-            <section id="third">
-                <h1>UPCOMING TOURS</h1><br>
-                <div class="spec-cont">
-                    <div class="dest">
-                        <div class="where-from" data-aos="zoom-out-left" data-aos-duration="1000">
-                            <p class="where-text-cont2"><span class="thick">Calabar Carnival</span><br><span class="grey">12 - 26 Dec 2022</span></p>
-                            <img src="unsplash_xeR-IPSV22A.png" class="where-img">
-                        </div>
-                        <div class="where-from" data-aos="zoom-out-left" data-aos-duration="1000">
-                            <p class="where-text-cont2"><span class="thick">Ikogosi Warm Spring</span><br><span class="grey">12 - 26 Dec 2023</span></p>
-                            <img class="where-img" src="unsplash_DmQgeERH8Bk.png">
-                        </div>
-                        <div class="where-from" data-aos="zoom-out-left" data-aos-duration="1000">
-                            <p class="where-text-cont2"><span class="thick">Labadi Beach</span><br><span class="grey">12 - 26 Dec 2024</span></p>
-                            <img class="where-img" src="unsplash_DmQgeERH8Bk.png">
-                        </div>
-                    </div>
-                    <button class="button2" data-aos="zoom-out-left" data-aos-duration="1000">LET'S GO</button>
-                </div>
-
-                <div class="inter-state-cont" data-aos="zoom-out-right" data-aos-duration="1000">
-                    <div class="inter-text-div">
-                        <h1>About 1goexplore</h1>
-                        <p class="with-text">1goexplore is an aggregrator of tour services/packages, simply connecting users to qualified tour agencies
-                            for a superb tour experience. We help ordinary people explore the world better.
-                        </p>
-                    </div>
-                    <div class="inter-img-cont">
-                        <div class="img1"></div>
-                    </div>
-                </div>
-
-            </section>
-            <section id="fourth">
-                <div id="exp-cont" class="fadey fadeyOut">
-                    <h1>Experience the beauty of the world</h1>
-                    <div class="exp-img-cont">
-                        <img src="beauty 1.jpg" class="exp-img">
-                        <img src="beauty 2.jpeg" class="exp-img">
-                        <img src="beauty 4.jpg" class="exp-img">
-                        <img src="beauty 3.jpg" class="exp-img">
-                    </div>
-                </div>
-                <div id="exp-cont" class="fadey fadeyOut">
-                    <h1>Experience diverse cultures around the world</h1>
-                    <div class="exp-img-cont">
-                        <img src="culture 1.jpg" class="exp-img">
-                        <img src="culture 2.jpeg" class="exp-img">
-                        <img src="culture 3.jpeg" class="exp-img">
-                        <img src="culture 4.jpg" class="exp-img">
-                    </div>
-                </div>
-                <div id="exp-cont" class="fadey fadeyOut">
-                    <h1>Experience mouth-watering dishes from around the world</h1>
-                    <div class="exp-img-cont">
-                        <img src="dish 1.jpg" class="exp-img">
-                        <img src="dish 2.jpg" class="exp-img">
-                        <img src="dish 3.jpg" class="exp-img">
-                        <img src="dish 4.jpg" class="exp-img">
-                    </div>
                 </div>
             </section>
         </main>
